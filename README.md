@@ -1,6 +1,7 @@
 # no_escape
 a simple minecraft mod.
 use mcreator 2024.1
+unzip and put the file in C:\MCreatorWorkspaces
 
 
 A little information about the mode:
