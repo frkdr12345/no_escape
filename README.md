@@ -12,7 +12,7 @@ Pressing j should cause the screen to shake/change size and the player's camera 
 
 this mod creates fake players in the game and you can see them both by pressing tab and commands like /tp
 
-in this mode, when you type help(thanks for https://www.youtube.com/@omer2714. ) or is that all? in chat, some procedures should work according to the message you write
+in this mode, when you type help(thanks for https://www.youtube.com/@omer2714.. ) or is that all? in chat, some procedures should work according to the message you write
 
 
 
