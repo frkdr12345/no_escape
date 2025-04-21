@@ -1,0 +1,12 @@
+{
+  "_fv": 60,
+  "_type": "damagetype",
+  "definition": {
+    "exhaustion": 0.99,
+    "scaling": "always",
+    "effects": "hurt",
+    "normalDeathMessage": "No",
+    "itemDeathMessage": "No",
+    "playerDeathMessage": "No"
+  }
+}

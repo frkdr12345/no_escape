@@ -1,0 +1,48 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="Not specified"
+
+[[mods]]
+modId="no_escape"
+version="1.0.0"
+displayName="no escape"
+displayURL="https://mcreator.net"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+authors="he missing"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.no_escape]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="BOTH"
+
+
+[[dependencies.no_escape]]
+    modId="world_edit"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.no_escape]]
+    modId="structure_expansion"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.no_escape]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.no_escape]]
+    modId="world_preview"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+

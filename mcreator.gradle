@@ -1,0 +1,94 @@
+repositories {
+    maven {
+        url "https://cursemaven.com"
+    }
+}
+
+dependencies {
+    implementation fg.deobf("curse.maven:worldedit-225608:4586218")
+}
+
+
+repositories {
+    maven {
+        url "https://cursemaven.com"
+    }
+}
+
+dependencies {
+    implementation fg.deobf('curse.maven:structure-expansion-398430:4680798')
+}
+
+minecraft {
+    runs {
+
+        all {
+            def srgToMcpFile = project.tasks.createSrgToMcp.outputs.files[0].path
+ 
+            property 'net.minecraftforge.gradle.GradleStart.srg.srg-mcp', srgToMcpFile
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', srgToMcpFile
+        }
+        
+        // ...
+    }
+ }
+
+
+repositories {
+  maven {
+      url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+  }
+}
+
+dependencies {
+  implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.4.2')
+}
+
+minecraft {
+  runs {
+     client {
+        property 'mixin.env.remapRefMap', 'true'
+        property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+    }
+      server {
+        property 'mixin.env.remapRefMap', 'true'
+        property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+    }
+      data {
+        property 'mixin.env.remapRefMap', 'true'
+        property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+    }
+  }
+}
+
+
+repositories {
+   maven {
+       url = 'https://cursemaven.com/'
+   }
+}
+
+dependencies {
+	implementation fg.deobf("curse.maven:world-preview-891429:4964102")
+}
+
+minecraft {
+	runs {
+    	client {
+        	property 'mixin.env.remapRefMap', 'true'
+        	property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+    	}
+    
+     	server {
+        	property 'mixin.env.remapRefMap', 'true'
+        	property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+    	}
+     	data {
+        	property 'mixin.env.remapRefMap', 'true'
+        	property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+    	}
+	}
+}
+
+

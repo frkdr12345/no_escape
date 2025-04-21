@@ -1,0 +1,281 @@
+{
+  "mod_elements": [
+    {
+      "name": "HelpOnKeyPressed",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "help_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/noescape/procedures/HelpOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Help",
+      "type": "keybind",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "help",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/noescape/network/HelpMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "Fakeplayer",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fakeplayer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/noescape/procedures/FakeplayerProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "All",
+      "type": "command",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "all",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/noescape/command/AllCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "No1",
+      "type": "damagetype",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "no_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/no_escape/damage_type/no_1.json"
+        ]
+      }
+    },
+    {
+      "name": "Light",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/no_escape/models/item/light.json",
+          "src/main/resources/assets/no_escape/blockstates/light.json",
+          "src/main/resources/data/no_escape/loot_tables/blocks/light.json",
+          "src/main/java/net/mcreator/noescape/block/LightBlock.java",
+          "src/main/resources/assets/no_escape/models/block/light.json"
+        ]
+      }
+    },
+    {
+      "name": "Shut",
+      "type": "command",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shut",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/noescape/command/ShutCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "No2",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "no_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/noescape/procedures/No2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LightOnTickUpdate",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/noescape/procedures/LightOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TabListModifier",
+      "type": "code",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "tab_list_modifier",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/noescape/TabListModifier.java"
+        ]
+      }
+    },
+    {
+      "name": "Shake",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shake",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/noescape/procedures/ShakeProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "Noescape",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noescape",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/noescape/procedures/NoescapeProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "CrashOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crash_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/noescape/procedures/CrashOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "Crash",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/noescape/entity/CrashEntity.java",
+          "src/main/resources/data/no_escape/forge/biome_modifier/crash_biome_modifier.json",
+          "src/main/java/net/mcreator/noescape/client/renderer/CrashRenderer.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "language_map": {
+    "en_us": {
+      "death.attack.no_1": "No",
+      "death.attack.no_1.item": "No",
+      "entity.no_escape.crash": "Crash",
+      "key.no_escape.help": "Help",
+      "death.attack.no_1.player": "No",
+      "block.no_escape.light": "Light"
+    },
+    "tr_tr": {
+      "death.attack.no_1": "No",
+      "death.attack.no_1.item": "No",
+      "entity.no_escape.crash": "Crash",
+      "key.no_escape.help": "yardım",
+      "death.attack.no_1.player": "No",
+      "block.no_escape.light": "Light"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "no_escape",
+    "modName": "no escape",
+    "version": "1.0.0",
+    "author": "he missing",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "world_edit",
+      "structure_expansion",
+      "geckolib",
+      "world_preview"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.noescape"
+  },
+  "mcreatorVersion": 202400118518
+}
