@@ -41,23 +41,23 @@ public class ShakeProcedure {
             bitisZamani = System.currentTimeMillis() + MAX_SURE;
             mesajlarGosterildi = false;
 
-            // Sadece ekran kararma başlangıcını başlat
+            
             if (aktif) {
-                kararmaAlpha = 0f;  // Alpha sıfırdan başlasın
+                kararmaAlpha = 0f;  
             }
 
             Minecraft mc = Minecraft.getInstance();
             mc.execute(() -> {
-                // Tam ekrandan çık
+                
                 if (mc.options.fullscreen().get()) {
                     mc.options.fullscreen().set(false);
                     mc.options.save();
                 }
 
-                // Pencereyi küçült
+                
                 mc.getWindow().setWindowed(KUCUK_PENCERE_GENISLIK, KUCUK_PENCERE_YUKSEKLIK);
 
-                // Ortaya hizala
+                
                 int ekranGenislik = GLFW.glfwGetVideoMode(GLFW.glfwGetPrimaryMonitor()).width();
                 int ekranYukseklik = GLFW.glfwGetVideoMode(GLFW.glfwGetPrimaryMonitor()).height();
                 int x = (ekranGenislik - KUCUK_PENCERE_GENISLIK) / 2;
@@ -65,7 +65,7 @@ public class ShakeProcedure {
                 GLFW.glfwSetWindowPos(mc.getWindow().getWindow(), x, y);
             });
 
-            // Korku pencerelerini ayrı thread'de göster
+             
             new Thread(() -> {
                 try {
                     for (int i = 0; i < 3; i++) {
@@ -92,7 +92,7 @@ public class ShakeProcedure {
 
             RandomSource random = mc.level != null ? mc.level.random : RandomSource.create();
 
-            // Kamera titretme
+            
             totalShakeOffset += siddet * 0.15f;
             float shakeX = Mth.sin(totalShakeOffset * 2.5f) * siddet * 3f;
             float shakeY = Mth.cos(totalShakeOffset * 1.8f) * siddet * 2f;
@@ -101,7 +101,7 @@ public class ShakeProcedure {
             event.setPitch(Mth.clamp(event.getPitch() + shakeY, -90, 90));
             event.setRoll(event.getRoll() + Mth.randomBetween(random, -siddet * 0.3f, siddet * 0.3f));
 
-            // Pencereyi zıplat
+            
             if (mc.getWindow() != null && zamanKalan % ATLAMA_ARALIGI < 50) {
                 long windowHandle = mc.getWindow().getWindow();
                 int genislik = mc.getWindow().getWidth();
@@ -136,25 +136,25 @@ public class ShakeProcedure {
         int width = mc.getWindow().getGuiScaledWidth();
         int height = mc.getWindow().getGuiScaledHeight();
 
-        // Alpha değerini yavaşça arttırıyoruz
+        
         if (kararmaAlpha < 0.75f) {
-            kararmaAlpha = Mth.clamp(kararmaAlpha + 0.01f, 0f, 1f);  // Alpha değeri küçük bir artışla
+            kararmaAlpha = Mth.clamp(kararmaAlpha + 0.01f, 0f, 1f);  
         }
 
-        RenderSystem.disableDepthTest();  // Render işlemi başlamadan önce derinlik testi kapatıyoruz
-        RenderSystem.enableBlend();       // Blend işlemini aktif ediyoruz
-        RenderSystem.defaultBlendFunc();  // Varsayılan blend fonksiyonunu kullanıyoruz
+        RenderSystem.disableDepthTest();  
+        RenderSystem.enableBlend();       
+        RenderSystem.defaultBlendFunc();  
 
-        // Karanlık overlay eklemek için gerekli işlemler
+        
         Tesselator t = Tesselator.getInstance();
         BufferBuilder buffer = t.getBuilder();
-        buffer.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);  // DefaultVertexFormat buraya eklendi
-        buffer.vertex(0, height, 0).color(0, 0, 0, kararmaAlpha).endVertex();  // alpha değeri burada kullanılıyor
+        buffer.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);  
+        buffer.vertex(0, height, 0).color(0, 0, 0, kararmaAlpha).endVertex();  
         buffer.vertex(width, height, 0).color(0, 0, 0, kararmaAlpha).endVertex();
         buffer.vertex(width, 0, 0).color(0, 0, 0, kararmaAlpha).endVertex();
         buffer.vertex(0, 0, 0).color(0, 0, 0, kararmaAlpha).endVertex();
         t.end();
 
-        RenderSystem.enableDepthTest();  // Render işlemi sonrası derinlik testi tekrar açılır
+        RenderSystem.enableDepthTest();  
     }
 }
