@@ -69,7 +69,7 @@ public class ShakeProcedure {
             new Thread(() -> {
                 try {
                     for (int i = 0; i < 3; i++) {
-                        JOptionPane.showMessageDialog(null, "You can't escape...", "System Error", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "broken :(", "System Error", JOptionPane.ERROR_MESSAGE);
                         Thread.sleep(700);
                     }
                     mesajlarGosterildi = true;
